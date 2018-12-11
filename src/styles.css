@@ -1,0 +1,37 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  margin: 0 auto;
+}
+
+.example-form{
+  margin: 0 auto;
+  width: 800px;
+}
+
+
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+.example-margin {
+  margin: 0 10px;
+}
+.mat-button.mat-accent {
+  background-color: #ff4081;
+  color: #fff
+}
+mat-form-field,mat-radio-button {
+  padding-right: 15px
+}

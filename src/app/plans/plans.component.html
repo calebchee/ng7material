@@ -1,0 +1,64 @@
+<div class="example-form">
+  <mat-card>
+
+    <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+      {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+    </button>
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Plan</ng-template>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Plan 1
+                </mat-panel-title>
+                <mat-panel-description>
+                  Summary of Benefits
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>More Benefits Here</p>
+
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Plan 2
+                </mat-panel-title>
+                <mat-panel-description>
+                  Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+          <p>
+            <button mat-button color="accent" matStepperNext>Next</button>
+          </p>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Details</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Address" formControlName="secondCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-button color="accent" matStepperPrevious>Back</button>
+            <button mat-button color="accent" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Payment</ng-template>
+        You are now done.
+        <div>
+          <button mat-button color="accent" matStepperPrevious>Back</button>
+          <button mat-button color="accent" (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+    <mat-card-content><button mat-button color="accent" routerLink="/">Back to Quote</button></mat-card-content>
+  </mat-card>
+</div>
