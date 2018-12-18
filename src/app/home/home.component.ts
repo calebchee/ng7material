@@ -1,19 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+
+export class HomeComponent {
 
   checked = false;
   indeterminate = false;
-
+  coverTypeDefault = 'Individual';
   constructor() { }
 
-  ngOnInit() {
-  }
+  adultAgeFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  dependantAgeFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+
 
 }

@@ -1,0 +1,25 @@
+<div class="example-form">
+  <mat-card>
+    <mat-horizontal-stepper [selectedIndex]="1">
+      <mat-step label="Plan">Plan</mat-step>
+      <mat-step label="Details">Details</mat-step>
+      <mat-step label="Payment">Payment</mat-step>
+    </mat-horizontal-stepper>
+
+    <mat-card-content>
+      <h3 mat-subheader>Details</h3>
+      <mat-form-field>
+        <input matInput placeholder="Input">
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <mat-select placeholder="Select">
+          <mat-option value="option">Option</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions><button mat-button color="accent" routerLink="/plans">Back to Addons</button><button mat-button
+        color="accent" routerLink="/payment">Next Step</button></mat-card-actions>
+  </mat-card>
+</div>

@@ -2,14 +2,16 @@
 
 body {
   margin: 0 auto;
+  background-color: rgb(250, 250, 250);
+
 }
 
 .example-form{
   margin: 0 auto;
-  width: 800px;
+  width: 1000px;
+  padding: 30px 50px;
+  border: 1px solid rgba(0,0,0,.03);
 }
-
-
 
 .example-container {
   display: flex;
@@ -32,6 +34,17 @@ body {
   background-color: #ff4081;
   color: #fff
 }
+
 mat-form-field,mat-radio-button {
   padding-right: 15px
+}
+
+/* When the input is not focused */
+md-input-container label {
+  color: red;
+}
+
+/* When the input is focused */
+md-input-container.md-input-focused label {
+  color: blue;
 }

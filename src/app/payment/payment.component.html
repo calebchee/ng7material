@@ -1,0 +1,16 @@
+<div class="example-form">
+  <mat-card>
+    <mat-horizontal-stepper [selectedIndex]="2">
+      <mat-step label="Plan">Plan</mat-step>
+      <mat-step label="Details">Details</mat-step>
+      <mat-step label="Payment">Payment</mat-step>
+    </mat-horizontal-stepper>
+
+    <mat-card-content>
+      <h3 mat-subheader>Payment</h3>
+
+    </mat-card-content>
+    <mat-card-actions><button mat-button color="accent" routerLink="/details">Back to Addons</button><button mat-button
+        color="accent" routerLink="/">Buy</button></mat-card-actions>
+  </mat-card>
+</div>

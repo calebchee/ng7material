@@ -33,12 +33,12 @@ a:active {
   width: 15%;
 }
 
-.label {
+/* .label {
   display: inline-block;
   line-height: 30px;
   margin: 0;
   width: 85%;
-}
+} */
 
 .backgroundwrapper{
   background-image: url(https://t2.gstatic.com/images?q=tbn:ANd9GcRW_z1R2c6mJuNDGJHYRYgC1qvrrQV34ewu_cRR5XXt9FmOZTsu);
@@ -46,5 +46,6 @@ a:active {
   background-size: cover;
   background-position: 50% 15%;
   height: auto;
-  min-height: 500px
+  min-height: 500px;
+  height: 1000px;
 }
